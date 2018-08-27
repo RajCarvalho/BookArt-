@@ -1,0 +1,22 @@
+<h1>Welcome to your kart</h1>
+<div id="bookListWrapper" class="container" >
+    
+            
+
+<div ng-repeat="x in kart">
+    <img  src={{x.imgUrl}}  width="100px"  height="100px">
+<h3 class=>Name:{{x.name}}</h3>
+<p>Price{{x.price}}</p>
+<ul class="list-unstyled list-inline">
+<li>Rating:{{x.rating}}</li>|
+<li> Binding:{{x.binding}}</li>|
+  <li> Publisher:{{x.publisher}}</li>|
+      <li>Release:{{x.release}}</li>|
+</ul>
+<button class="btn btn-info"   ng-click="buy(x)">buy</button>
+<hr style="color:black">
+<br>
+</div>
+
+
+</div>  

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <title>
+            BookKart.com
+        </title>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    </head>
+    <body>
+ <div ng-app="bookArt">
+
+<br>
+<br>
+       <div id="headerWrapper" class="container" ng-controller="headerController">
+                <h1 class="logo">{{appDetails.title}}</h1>
+                <p  ng-init="numOfBooks=10"></p>
+                <p class="tagline">we have more then   {{ numOfBooks+ " million"}} Books collection</p> 
+                <hr>
+                
+ 
+                 <button type="button" class="btn btn-default navbar-btn  " ng-class="{active:btn.isActive('/books')}"><a href="#/books" style="text-decoration: none">Books</a></button>
+                  <button type="button" class="btn btn-default navbar-btn  ng-class="{active:btn.isActive('/kart')}"><a href="#/kart" style="text-decoration: none">Kart</a></button>
+                </ul>
+                  <div ng-view=""></div>
+                  
+
+
+      
+</div>
+
+
+        <script src="bookKart.js"></script>
+    </body>
+    </html>
+

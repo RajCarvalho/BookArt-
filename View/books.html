@@ -1,0 +1,26 @@
+
+<div id="bookListWrapper" class="container" >
+        <form   role="search">
+                
+                  <input type="text" class="form-control" placeholder="Search for a Book here.." ng-model="filter">
+                  <br>
+              </form>
+                
+
+<div ng-repeat="x in books|filter:filter" style="border:3px solid-black">
+        <img  src={{x.imgUrl}}  width="100px"  height="100px">
+<h3 class=>Name:{{x.name}}</h3>
+<p>Price{{x.price|currency:'Rs.'}}</p>
+<ul class="list-unstyled list-inline">
+    <li>Rating:{{x.rating}}</li>|
+    <li> Binding:{{x.binding}}</li>|
+      <li> Publisher:{{x.publisher}}</li>|
+          <li>Release:{{x.release}}</li>|
+</ul>
+<button class="btn btn-info"   ng-click="goToKart(x)">Add to Cart</button>
+<hr style="color:black">
+<br>
+</div>
+
+
+</div>  
